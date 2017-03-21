@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Consultar</title>
+	<link rel="stylesheet" href="css/consultar_empleado.css">
+	<link rel="icon" href="imgs/ICONO.png">
+	
+</head>
+<body>
+	<form action="" method="post" id="consultar_empleado">
+		<fieldset>
+			<h1>CONSULTAR</h1>
+			<a href="menu.html"><img src="imgs/cars.png" alt=""></a>
+			<div>
+				<input type="text" id="nombre" placeholder="Digitar Nombre(s)" data-validation="length" data-validation-length="min3">
+			</div>
+			<div>
+				<input type="text" id="apellido" placeholder="Digitar Apellido(s)" data-validation="length" data-validation-length="min3">
+			</div>
+			<div>
+				<input type="number" id="documento" placeholder="Digitar Documento De Identidad" data-validation="length" data-validation-length="min9">
+			</div>
+			<div>
+				<input type="number" id="licencia" placeholder="Digite Numero De Su Licencia De Conduccion" data-validation="length" data-validation-length="min9">
+			</div>
+			<div>
+			<br>
+				<input type="submit" value="consultar" class="consultar">
+			</div>
+		</fieldset>
+	</form>
+
+	<script src="js/jquery-3.1.1.js"></script>
+	<script src="js/jquery.form-validator.min.js"></script>
+	<script src="js/jquery.form-validator.es.js"></script>
+	<script>
+		$(document).ready(function() {
+			$.validate({ 
+				form: '#consultar_empleado', 
+				language: es 
+			});
+		});
+	</script>
+</body>
+</html>

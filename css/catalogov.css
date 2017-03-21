@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
+body{
+  background: url(../imgs/carro4.jpg) no-repeat;
+  background-size: cover;
+}
+.titulo{
+  color: #bbbbbb;
+  font-family: lobster;
+  font-size: 66px;
+  text-align: center;
+}
+div#carro{
+  display: block;
+  width: 500px;
+  height: 90px;
+  margin: 10px; 
+}
+div#carro div.car{
+  width: 80%;
+  height: 80%;
+  background-color: rgba(0,0,0,0.5);
+  display: inline-block;
+  margin: 15px 20px;
+  vertical-align: top;
+}
+}
+div#carro {
+  display: none;
+
+}
+
+div#carro, div.car1, section.imagen1{
+
+  display: block;
+  width: 100%;
+  height: 50%;
+  margin: auto;
+  background-size: 50%;
+}
+div#carro div.car1 p.au1{
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+}
+
+div#carro, div.car2, section.imagen2{
+
+  display: block;
+  width: 100%;
+  height: 50%;
+  margin: auto;
+  background-size: 20%;
+}
+div#carro div.car2 p.au2{
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+}
+div#carro div.car3 section.imagen3{
+  background: url(../imgs/car3.jpg) no-repeat center center;
+  display: block;
+  width: 100%;
+  height: 50%;
+  margin: auto;
+  background-size: 0%;
+}
+div#carro div.car3 p.au3{
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+}
+div#carro div.car4 section.imagen4{
+  background: url(../imgs/car4.png) no-repeat center center;
+  display: block;
+  width: 100%;
+  height: 50%;
+  margin: auto;
+  background-size: 20%;
+}
+div#carro div.car4 p.au4{
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+}
+div#carro div.car5 section.imagen5{
+  background: url(../imgs/car5.png) no-repeat center center;
+  display: block;
+  width: 100%;
+  height: 50%;
+  margin: auto;
+  background-size: 20%;
+}
+div#carro div.car5 p.au5{
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+}
+div#carro div.car6 section.imagen6{
+  background: url(../imgs/car6.jpg) no-repeat center center;
+  display: block;
+  width: 100%;
+  height: 50%;
+  margin: auto;
+  background-size: 20%;
+}
+div#carro div.car6 p.au6{
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+}
+
+div.car1, section.imagen1{
+  background: url(../imgs/viej1.png)no-repeat center center;
+  background-size: 100%;
+
+}
+div.car2{
+  background: url(../imgs/viej2.png)no-repeat center center;
+  background-size: 100%;
+
+}
+div.car3{
+  background: url(../imgs/viej3.png)no-repeat center center;
+  background-size: 100%;
+}
+div.car4{
+  background: url(../imgs/viej4.png)no-repeat center center;
+  background-size: 100%;
+}
+div.car5{
+  background: url(../imgs/viej5.png)no-repeat center center;
+  background-size: 100%;
+}
+div.car6{
+  background: url(../imgs/viej6.png)no-repeat center center;
+  background-size: 100%;
+}
+div#carro{
+  display: block;
+  width: 1000px; 
+  margin-left: 200px;
+  height: 1000px;  
+ 
+}
+.sect1{
+  width: 300px;
+  height: 200px;
+  background-color: rgba(0,0,0,0.5);
+  text-align: center;
+  display: inline-block;
+  margin-left: 2px;
+}
+p{
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  font-family: Arial;
+  font-size: 15px;
+}
+
+div.color{
+  background:  rgba(255,255,255,0.2);
+  width: 300px; ;
+  margin:auto;
+  border-radius: 10px;
+}
+img.icono{
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  top: -15px;
+  left: 350px;
+}
+button.auto a{
+  text-decoration: none;
+  border: none;
+}
+button{
+  border: none;
+  padding: 4px;
+  border-radius: 5px;
+  font-family: black Arial;
+  font-size: 20px;
+  background-color: #BDADAD ;
+}
+button:hover{
+  background-color: #7D7A7A; 
+}
+button a:hover{
+  color: white;
+}
+section.sect1{
+  margin: 10px;
+}
+a{
+  font-family: Arial;
+  color: black;
+  font-size: 15px;
+}

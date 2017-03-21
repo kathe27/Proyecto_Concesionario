@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Catalogo</title>
+	<link rel="stylesheet" href="css/modificar_catalogo.css">
+	<link rel="icon" href="imgs/ICONO.png">
+	
+</head>
+<body>
+	<form action="" method="post" id="modificar_catalogo">
+		<fieldset>
+			<h1>MODIFICAR</h1>
+			<a href="menu.html"><img src="imgs/cars.png" alt=""></a>
+			<div>
+				<input type="text" id="marcas" placeholder="Marca Del Auto" data-validation="length" data-validation-length="min3">
+			</div>
+			<div>
+				<input type="text" id="modelo" placeholder="Modelo De Referencia" data-validation="length" data-validation-length="min4">
+			</div>
+			<div>
+				<input type="text" id="color" placeholder="Color" data-validation="length" data-validation-length="min3">
+			</div>
+			<div>
+				<label>Tipo Emision</label><br>
+				<select>
+					<option value="">Selecciones Una Opcion</option>
+					<option>Disel</option>
+					<option>gasolina</option>
+				</select>
+			</div>
+			<div>
+				<label>Unico Dueño</label><br>
+				<select>
+					<option>Seleccione Una Opcion</option>
+					<option>Si</option>
+					<option>No</option>
+				</select>
+			</div>
+			<div>
+				<input type="number" id="ano" placeholder="Ingrese El Año" data-validation="length" data-validation-length="min4">
+			</div>
+			<div>
+				<label>Tipo De Frenos</label>
+				<select>
+					<option>Seleccione Una Opcion</option>
+					<option>Disco</option>
+					<option>ABS</option>
+				</select>
+			</div>
+			<div>
+				<label>Aire Acondicionado</label>
+				<select>
+					<option>Selecciones Una Opcion</option>
+					<option>Si</option>
+					<option>No</option>
+				</select>
+			</div>
+			<div class="btn">
+			<br>
+				<input type="submit" value="Enviar" class="enviar">
+			</div>
+
+		</fieldset>
+	</form>
+
+	<script src="js/jquery-3.1.1.js"></script>
+	<script src="js/jquery.form-validator.min.js"></script>
+	<script src="js/jquery.form-validator.es.js"></script>
+	<script>
+		$(document).ready(function() {
+			$.validate({ 
+				form: '#modificar_catalogo', 
+				language: es 
+			});
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Eliminar</title>
+	<link rel="stylesheet" href="css/eliminar_catalogo.css">
+	<link rel="icon" href="imgs/ICONO.png">
+	
+</head>
+<body>
+	<form action="" method="post" id="eliminar_catalogo">
+		<fieldset>
+			<h1>Eliminar</h1>
+			<a href="menu.html"><img src="imgs/cars.png" alt=""></a>
+			<div>
+				<input type="text" id="marca" placeholder="Escoja La Marca"
+				data-validation="length" data-validation-length="min3">
+			</div>
+			<div>
+				<input type="text" id="modelo" placeholder="Escoja un Modelo" data-validation="length" data-validation-length="min4">
+			</div>
+			<div>
+				<input type="submit" value="Eliminar" class="btn">
+			</div>
+		</fieldset>
+	</form>
+
+	<script src="js/jquery-3.1.1.js"></script>
+	<script src="js/jquery.form-validator.min.js"></script>
+	<script src="js/jquery.form-validator.es.js"></script>
+	<script>
+		$(document).ready(function() {
+			$.validate({ 
+				form: '#eliminar_catalogo', 
+				language: es 
+			});
+		});
+	</script>
+</body>
+</html>

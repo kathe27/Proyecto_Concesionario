@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Inicio Sesion</title>
+	<link rel="stylesheet" href="css/loguin.css">
+	<link rel="icon" href="imgs/ICONO.png">
+	
+</head>
+<body>
+	<form action="" method="post" id="loguin">
+		<fieldset>
+		<h1>INGRESAR</h1>
+			<a href="menu.html"><img src="imgs/cars.png" alt=""></a>
+			<a href="https://accounts.google.com"><img class="gmail" src="imgs/gmail.png" alt=""></a>
+			<a href="https://facebook.com"><img class="facebook" src="imgs/facebook.png" alt=""></a>
+			<div>
+				<input id="user" type="text" placeholder="Correo electronico" data-validation="email">
+			</div>
+			<div>
+				<input id="password" type="password" placeholder="Contraseña" data-validation="length" data-validation-length="min7">
+			</div>
+			<div>
+
+				<a class="registre" href="registro.html">Registrate aqui!</a>
+				<br>
+				<br>
+				<input type="submit" value="Iniciar Sesion" class="enviar">
+			</div>
+		</fieldset>
+	</form>
+
+	<script src="js/jquery-3.1.1.js"></script>
+	<script src="js/jquery.form-validator.min.js"></script>
+	<script src="js/jquery.form-validator.es.js"></script>
+	<script>
+		$(document).ready(function() {
+			$.validate({ 
+				form: '#loguin', 
+				language: es 
+			});
+		});
+	</script>	
+	
+</body>
+</html>

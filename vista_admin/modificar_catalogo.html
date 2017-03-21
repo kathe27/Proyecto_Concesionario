@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Catalogo</title>
+	<link rel="stylesheet" href="css/modificar_catalogo.css">
+	<link rel="icon" href="imgs/ICONO.png">
+	
+</head>
+<body>
+	<form action="">
+		<fieldset>
+			<h1>MODIFICAR</h1>
+			<a href="menu.html"><img src="imgs/cars.png" alt=""></a>
+			<div>
+				<label>Ingresa el archivo:</label>
+				<input name="imagen" type="file" >
+			</div>
+			<div>
+				<input type="text" id="marcas" placeholder="Marca Del Auto" data-validation="length" data-validation-length="min3">
+			</div>
+			<div>
+				<input type="text" id="modelo" placeholder="Modelo De Referencia" data-validation="length" data-validation-length="min3">
+			</div>
+			<div>
+				<input type="text" id="color" placeholder="Color" data-validation="length" data-validation-length="min3">
+			</div>
+			<div>
+				<input type="text" id="precio" placeholder="Precio" data-validation="length" data-validation-length="min3">
+			</div>
+			<div class="btn">
+			<br>
+				<input type="submit" value="Añadir" class="enviar">
+			</div>
+
+
+		</fieldset>
+	</form>
+
+
+</body>
+</html>

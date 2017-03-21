@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
+body{
+	font-family: Arial;
+	text-align: center;
+	background: url(../imgs/carro1.jpg) center no-repeat;
+	background-size: cover; 
+}
+h1{
+	text-align: center;
+	font-family: lobster;
+	color: white;
+}
+fieldset{
+	background-color: rgba(20,20,20,0.5);
+	margin: 200px;
+	width: 380px;
+	position: relative;
+	left: 300px;
+	bottom: 100px;
+	height: 270px;
+	border: none;
+}
+input.enviar{
+	cursor: pointer;
+	border: none;
+	padding: 10px;
+	width: 105%;
+}
+div{
+	margin: 7px;
+	position: relative;
+	right: 6px;
+	bottom: 30px;
+}
+input{
+	width: 100%;
+	padding: 7px;
+}
+div.btn{
+	margin: 5px;
+	width: 101%;
+	font-family: 14px Arial;
+	border: none;
+}
+img{
+	width: 60px;
+	height: 60px;
+	position: relative;
+	bottom: 65px;
+	left: 150px;
+	color: white;
+}
+img:hover{  
+  	-webkit-transform: scale(1.1);
+  	transform: scale(1.1);
+}
+input.enviar:hover{
+	background-color: #A19F9F;
+	color: #fff;
+}
+#user{
+	background: #FFFFFF url(../imgs/user.png) no-repeat center right;
+	background-size: 5%;
+	border: #C3BBBB 1px solid;
+}
+#password{
+	background: #FFFFFF url(../imgs/password.png) no-repeat center right;
+	background-size: 5%;
+	border: #C3BBBB 1px solid;
+}
+a.registre{
+	color: white;
+}
+img.gmail{
+	position: relative;
+	bottom: 30px;
+	left: -170px;
+	width: 40px;
+	height: 40px;
+}
+img.facebook{
+	position: relative;
+	bottom: 30px;
+	left: -170px;
+	width: 40px;
+	height: 40px;
+}
+
+

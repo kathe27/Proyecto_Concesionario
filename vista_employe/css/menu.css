@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
+body{
+	background: url(../imgs/inicio.jpg) center no-repeat;
+	background-size: cover;
+}
+.titulo{
+	color: #bbbbbb;
+	font-family: lobster;
+	font-size: 66px;
+	text-align: center;
+}
+ul.verticalmenu, ul.verticalmenu ul{
+	text-decoration: none;
+	list-style: none;
+	margin:0;
+	padding:0;
+}
+
+ul.verticalmenu a{
+	text-decoration: none;
+}
+
+ul.verticalmenu li{
+	position: relative;
+	border-bottom-style: solid;
+	border-bottom-color: #F9F3F3;
+	border-bottom-width: 1px;
+}
+
+ul.verticalmenu li:last-child {
+	border-bottom-style: none;
+}
+
+ul.verticalmenu li a{
+	display: block;
+	background: none;
+	color: #FAEFEF;
+	padding:2em;
+	border-radius: 10px;
+}
+
+ul.verticalmenu li a:hover{
+	color: black;
+	background: #BCA9A9;
+	transition: background-color 0.2s;
+}
+
+ul.verticalmenu li a.preClicked{
+	background-color: #AC9B9B;
+	font-weight: bold;
+}
+
+ul.verticalmenu a.arrow-down, ul.verticalmenu a.arrow-down:hover{
+	background-color: #944E4E;
+}
+
+ul.verticalmenu li > ul{
+	position: relative;
+	display:none;
+	top:0;
+	left: 0;
+}
+
+ul.verticalmenu li > ul > li > a{
+	padding-left: 40px;
+}
+
+ul.verticalmenu li > ul > li > ul > li > a{
+	padding-left: 40px;
+}
+
+ul.verticalmenu li[isClicked] > a{
+	font-weight: bold;
+	background-color: #BCA9A9;
+	display: block;
+}
+
+ul.verticalmenu li > a > span.glyphicon:first-child{
+	margin-right: 5px;
+}
+a.btn{
+	text-decoration: none;
+	padding: 10px;
+	background-color: #5B6063;
+	color: white;
+	position: relative;
+	left: 1100px;
+	font-family: Arial;
+	border-radius: 5px;
+}
+a.btn:hover{
+	color: #FFFFFF;
+	background-color: #383737;
+}
+img.icono{
+	height: 150px;
+	width: 150px;
+	position: absolute;
+	top: -15px;
+	left: 350px;
+}
+ul#menu{
+	border: none;
+	border-radius: 10px;
+}
