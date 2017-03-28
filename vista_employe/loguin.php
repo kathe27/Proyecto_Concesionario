@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,14 +16,14 @@
 			<a href="https://accounts.google.com"><img class="gmail" src="imgs/gmail.png" alt=""></a>
 			<a href="https://facebook.com"><img class="facebook" src="imgs/facebook.png" alt=""></a>
 			<div>
-				<input id="user" type="text" placeholder="Correo electronico" data-validation="email">
+				<input id="user" name="email" type="text" placeholder="Correo electronico" data-validation="email">
 			</div>
 			<div>
-				<input id="password" type="password" placeholder="Contraseña" data-validation="length" data-validation-length="min7">
+				<input id="password" name="contrasena" type="password" placeholder="Contraseña" data-validation="length" data-validation-length="min7">
 			</div>
 			<div>
 
-				<a class="registre" href="registro.html">Registrate aqui!</a>
+				<a class="registre" href="registro.php">Registrate aqui!</a>
 				<br>
 				<br>
 				<input type="submit" value="Iniciar Sesion" class="enviar">
@@ -41,6 +42,25 @@
 			});
 		});
 	</script>	
+
+	<?php 
+		if ($_POST) {
+				$email = $_POST['email'];
+				$contrasena = $_POST['contrasena'];
+				$con = mysqli_connect('localhost','root','','proyecto_agil');
+  				$sql = "SELECT email, apellidos FROM empleados WHERE email = '$email' AND contrasena = '$contrasena'";
+				$query = mysqli_query($con, $sql);
+  				if(mysqli_num_rows($query) > 0){
+  				$row = mysqli_fetch_array($query);
+  				$_SESSION['nombre'] = $row['nombre']." ".$row['apellidos'];
+  				header("location: menu_logueo.php");
+  				}else {
+  				echo "<script>
+  				alert('Email o Contraseña Incorrectos')
+  				</script>";
+	}
+		}
+ ?>
 	
 </body>
 </html>

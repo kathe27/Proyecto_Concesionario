@@ -23,7 +23,7 @@
 	<form action="" method="post" id="modificar_catalogo">
 		<fieldset>
 			<h1>MODIFICAR</h1>
-			<a href="menu.html"><img src="imgs/cars.png" alt=""></a>
+			<a href="consultar_catalogo.php"><img src="imgs/cars.png" alt=""></a>
 			<div>
 				<input type="text" value="<?php echo $row['marcas'] ?>" id="marcas" name="marcas" placeholder="Digitar Marca Del Auto" data-validation="length" data-validation-length="min3">
 			</div>

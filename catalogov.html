@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h1 class="titulo">DPK NEW-CARS</h1>
-	<a href="menu.html"><img class="icono" src="imgs/ICONO.png" alt=""></a>
+	<a href="menu_logueo.php"><img class="icono" src="imgs/ICONO.png" alt=""></a>
 	<a href=""></a>
 	
 		<div id="carro">
@@ -22,7 +22,7 @@
 				<p>COLOR: Blanco</p>
 				<p>PRECIO: $67.000.000</p>
 
-					<button class="auto" type="button"><a href="registro.html">Separar Cita</a></button>
+					<button class="auto" id="btn1" type="button"><a href="#">Comprar</a></button>
 				</p>
 			</div>	
 			</section>
@@ -36,7 +36,7 @@
 				<p>COLOR: Blanco</p>
 				<p>PRECIO: $43.000.000</p>
 
-					<button class="auto" type="button"><a href="registro.html">Separar Cita</a></button>
+					<button class="auto" id="btn2" type="button"><a href="#">Comprar</a></button>
 				</p>
 				</div>
 			</section>
@@ -50,7 +50,7 @@
 				<p>COLOR: Azul Titanium</p>
 				<p>PRECIO: $39.000.000</p>
 
-					<button class="auto" type="button"><a href="registro.html">Separar Cita</a></button>
+					<button class="auto" type="button"><a href="carrito.html">Comprar</a></button>
 				</p>
 				</div>
 			
@@ -64,7 +64,7 @@
 				<p>COLOR: Blanco</p>
 				<p>PRECIO: $95.000.000</p>
 
-					<button class="auto" type="button"><a href="registro.html">Separar Cita</a></button>
+					<button class="auto" type="button"><a href="carrito.html">Comprar</a></button>
 				</p>
 				</div>
 			
@@ -78,7 +78,7 @@
 				<p>COLOR: Negro Cristal</p>
 				<p>PRECIO: $34.000.000</p>
 
-					<button class="auto" type="button"><a href="registro.html">Separar Cita</a></button>
+					<button class="auto" id="btn3" type="button"><a href="#">Comprar</a></button>
 				</p>
 				</div>
 			
@@ -92,12 +92,30 @@
 				<p>COLOR: Gris</p>
 				<p>PRECIO: $50.800.000</p>
 
-					<button class="auto" type="button"><a href="registro.html">Separar Cita</a></button>
+					<button class="auto" type="button"><a href="carrito.html">Comprar</a></button>
 				</p>
 				</div>
 			
 			</section>
 		</div>
+
+		<script>
+			var btn1=document.getElementById('btn1');
+			btn1.onclick=function(){
+				alert("El vehiculo se Encuentra Agotado!")
+			}
+
+			var btn2=document.getElementById('btn2');
+			btn2.onclick=function(){
+				alert("El vehiculo se Encuentra Agotado!")
+			}
+
+			var btn3=document.getElementById('btn3');
+			btn3.onclick=function(){
+				alert("El vehiculo se Encuentra Agotado!")
+			}
+		</script>
+
 
 </body>
 </html>

@@ -30,7 +30,7 @@
 	<form action="" method="get" id="consultar_catalogo">
 		<fieldset>
 			<h1>CONSULTAR</h1>
-			<a href="menu.html"><img src="imgs/cars.png" alt=""></a>
+			<a href="menu_logueo.php"><img src="imgs/cars.png" alt=""></a>
 			<div>
 				<input type="text" id="marcas" name="marcas" placeholder="Digite Marca De Carro" data-validation="length" data-validation-length="min3">
 			</div>
@@ -63,6 +63,7 @@
 			echo "
 				<table border='1px'>
 					<tr>
+						<th>Foto</th>
 						<th>Marca</th>
 						<th>Modelo</th>
 						<th>Color</th>
@@ -70,6 +71,7 @@
 						<th>opciones</th>
 					</tr>
 					<tr>
+						<td>".$row['foto']."</td>
 						<td>".$row['marcas']."</td>
 						<td>".$row['modelo']."</td>
 						<td>".$row['color']."</td>

@@ -30,7 +30,7 @@
 	<form action="" method="get" id="consultar_empleado">
 		<fieldset>
 			<h1>CONSULTAR</h1>
-			<a href="menu.html"><img src="imgs/cars.png" alt=""></a>
+			<a href="menu_logueo.php"><img src="imgs/cars.png" alt=""></a>
 			<div>
 				<input type="number" id="documento" name="documento" placeholder="Digitar Documento De Identidad" data-validation="length" data-validation-length="min9">
 			</div>			
@@ -65,18 +65,16 @@
 					<tr>
 						<th>Nombre</th>
 						<th>Apellido</th>
-						<th>Documento</th>
-						<th>Licencia</th>
 						<th>opciones</th>
 					</tr>
 					<tr>
 						<td>".$row['nombre']."</td>
 						<td>".$row['apellido']."</td>
-						<td>".$row['documento']."</td>
-						<td>".$row['licencia']."</td>
 						<td>
 						<a href='modificar_empleado.php?id=".$row['id']."'><button class='glyphicon glyphicon-pencil'></button></a>
+						<a href='consultare.php?id=".$row['id']."'><button class='glyphicon glyphicon-search'></button></a>
 						<a href='eliminar_empleado.php?id=".$row['id']."'><button class='glyphicon glyphicon-trash'></button></a>
+						</td>
 					</tr>
 					</tr>
 												

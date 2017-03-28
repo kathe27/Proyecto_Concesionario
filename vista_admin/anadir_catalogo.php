@@ -11,7 +11,7 @@
 	<form action="" method="post" id="anadir_catalogo">
 		<fieldset>
 			<h1>AÑADIR</h1>
-			<a href="menu.html"><img src="imgs/cars.png" alt=""></a>
+			<a href="menu_logueo.php"><img src="imgs/cars.png" alt=""></a>
 			<div>
 				<label>Ingresa el archivo:</label>
 				<input name="imagen" type="file" >

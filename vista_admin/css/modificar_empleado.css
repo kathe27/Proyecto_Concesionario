@@ -4,7 +4,7 @@ body{
 	font-family: Arial;
 	text-align: center;
 	background: url(../imgs/carro1.jpg) no-repeat;
-	background-size: cover; 
+	background-size: 100%; 
 }
 h1{
 	text-align: center;
@@ -18,7 +18,7 @@ fieldset{
 	position: relative;
 	left: 300px;
 	bottom: 100px;
-	height: 330px;
+	height: 510px;
 	border: none;
 }
 div{

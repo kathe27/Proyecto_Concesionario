@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
+html {
+	font-size: 62.5%;
+}
+body {
+	font: 1.6rem sans-serif;
+	background: url(../imgs/carretera.jpg) no-repeat;
+  	background-size: cover;
+}
+
+section#app {
+	margin: 20px auto;
+	width: 1024px;
+}
+
+article#productos,
+article#carrito {
+	display: inline-block;
+	height: 380px;
+	vertical-align: top;
+	width: 500px;
+}
+
+article#productos {
+	background: #fff url(../imgs/productos.png) no-repeat;
+	margin-right: 14px;
+}
+
+article#carrito {
+	background: #dcdbea url(../imgs/carrito.png) no-repeat;
+	min-height: 380px;
+}
+
+article#productos input,
+article#productos button {
+	border: 1px solid #91a50a;
+	background-color: rgba(255, 255, 255, 0.5);
+	font-size: 2rem;
+	height: 60px;
+	outline: none;
+	position: relative;
+}
+
+article#productos input#nproducto {
+	display: block;
+	margin: 0px auto;
+	top: 100px;	
+	padding-left: 20px;
+	width: 430px;
+}
+
+article#productos input#valor,
+article#productos input#cantidad {
+	top: 120px;
+	padding-left: 20px;
+	width: 180px;
+}
+
+article#productos input#valor {
+	margin-left: 23px;
+}
+
+article#productos input#cantidad {
+	margin-left: 40px;
+}
+
+article#productos button#adicionar {
+	border: 1px solid #424c05;
+	background-color: #91a50a;
+	color: #fff;
+	margin-left: 272px;
+	top: 140px;
+	width: 204px;
+}
+
+article#productos button#adicionar:hover {
+	background-color: #5c6903;
+	cursor: pointer;
+}
+
+article#carrito  table.table {
+	border-collapse: collapse;
+	color: #646472;
+	margin: 100px auto 0px auto;
+	width: 480px;
+}
+
+article#carrito table.table th {
+	background-color: #335171;
+	color: #fff;
+}
+
+article#carrito table.table tr {
+	background-color: #fff;
+}
+
+article#carrito table.table td {
+	text-align: center;
+}
+
+article#carrito table.table td button {
+	border: none;
+	border-radius: 2px;
+	background-color: #b20000;
+	color: #fff;
+}
+
+article#carrito table.table td button:hover {
+	cursor: pointer;
+	background-color: #8c0000;
+}
+
+h2.total {
+	color: #646472;
+	font-weight: normal;
+	font-size: 3rem;
+	margin: 20px 0px 0px 0px;
+	padding: 0px;
+	text-align: center;
+}
+
+h2.total span {
+	color: #314c6c;
+}
+.titulo{
+  color: #bbbbbb;
+  font-family: lobster;
+  font-size: 66px;
+  text-align: center;
+}
+img.icono{
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  top: -15px;
+  left: 350px;
+}
+

@@ -7,9 +7,9 @@
 	<link rel="icon" href="imgs/ICONO.png">
 </head>
 <body>
+
 	<h1 class="titulo">DPK NEW-CARS</h1>
-	<a href="menu.html"><img class="icono" src="imgs/ICONO.png" alt=""></a>
-	<a href=""></a>
+	<a href="menu_logueo.php"><img class="icono" src="imgs/ICONO.png" alt=""></a>
 	
 		<div id="carro">
 			<section class="sect1">
@@ -22,7 +22,7 @@
 				<p>COLOR: Gris Metalizado</p>
 				<p>PRECIO: $100.000.00</p>
 
-					<button class="auto" type="button"><a href="registro.html">Separar Cita</a></button>
+					<button class="auto" type="button"><a href="carrito.html">Comprar</a></button>
 				</p>
 			</div>	
 			</section>
@@ -36,7 +36,7 @@
 				<p>COLOR: Gris Plateado</p>
 				<p>PRECIO: $229.700.00</p>
 
-					<button class="auto" type="button"><a href="registro.html">Separar Cita</a></button>
+					<button class="auto" id="btn2" type="button"><a href="#">Comprar</a></button>
 				</p>
 				</div>
 			</section>
@@ -45,12 +45,12 @@
 				<div class="color">
 				<p class="au1">CARRO3
 
-				<p>MARCA: volkswagen</p>
+				<p>MARCA: Volkswagen</p>
 				<p>MODELO: Beetle convertible</p>
 				<p>COLOR: Amarillo</p>
 				<p>PRECIO: $75.100.00</p>
 
-					<button class="auto" type="button"><a href="registro.html">Separar Cita</a></button>
+					<button class="auto" type="button"><a href="carrito.html">Comprar</a></button>
 				</p>
 				</div>
 			
@@ -64,7 +64,7 @@
 				<p>COLOR:Rojo</p>
 				<p>PRECIO: $50.000.00</p>
 
-					<button class="auto" type="button"><a href="registro.html">Separar Cita</a></button>
+					<button class="auto" id="btn4" type="button"><a href="#">Comprar</a></button>
 				</p>
 				</div>
 			
@@ -78,7 +78,7 @@
 				<p>COLOR:Rojo Encendido</p>
 				<p>PRECIO: $98.000.00</p>
 
-					<button class="auto" type="button"><a href="registro.html">Separar Cita</a></button>
+					<button class="auto" id="btn5" type="button"><a href="#">Comprar</a></button>
 				</p>
 				</div>
 			
@@ -92,12 +92,28 @@
 				<p>COLOR: Gris</p>
 				<p>PRECIO: $87.500.00</p>
 
-					<button class="auto" type="button"><a href="registro.html">Separar Cita</a></button>
+					<button class="auto" type="button"><a href="carrito.html">Comprar</a></button>
 				</p>
 				</div>
 			
 			</section>
 		</div>
 
+		<script>
+			var btn2=document.getElementById('btn2');
+			btn2.onclick=function(){
+				alert("El vehiculo se Encuentra Agotado!")
+			}
+
+			var btn4=document.getElementById('btn4');
+			btn4.onclick=function(){
+				alert("El vehiculo se Encuentra Agotado!")
+			}
+
+			var btn5=document.getElementById('btn5');
+			btn5.onclick=function(){
+				alert("El vehiculo se Encuentra Agotado!")
+			}
+		</script>
 </body>
 </html>

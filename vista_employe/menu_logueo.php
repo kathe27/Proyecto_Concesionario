@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html>
 <title>newcars</title>
@@ -27,15 +28,23 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 
 <h1 class="titulo">DPK NEW-CARS</h1>
 <img class="icono" src="imgs/ICONO.png" alt="">
-<a class="btn" href="loguin.php">Iniciar sesion</a>
 
 
 <ul id="menu">
 <li>
-	<a href="menu.html"><span class="glyphicon glyphicon-home"></span>Inicio</a>
+	<a href="menu.html"><span class="glyphicon glyphicon-home"></span><?php echo $_SESSION['nombre']; ?></a>
 </li>
 <li>
 	<li><a href="galeria.html"><span class="glyphicon glyphicon-search"></span>Quienes Somos</a></li>
+</li>
+<li>
+	<a href="#"><span class="glyphicon glyphicon-record"></span>Gestionar Catalogo</a>
+	<ul>
+		<li><a href="catalogo.html"><span class="glyphicon glyphicon-search"></span>Nuevos</a></li>
+		<li><a href="catalogov.html"><span class="glyphicon glyphicon-file"></span>Viejos</a></li>
+		<li><a href="anadir_catalogo.php"><span class="glyphicon glyphicon-plus"></span>Añadir Catalogo</a></li>
+		<li><a href="consultar_catalogo.php"><span class="glyphicon glyphicon-search"></span>Consultar Catalogo</a></li>
+	</ul>
 </li>
 <li>
 	<a href="maps.html"><span class="glyphicon glyphicon-map-marker"></span>Ubicacion</a>

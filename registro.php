@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Empleado</title>
-	<link rel="stylesheet" href="css/añadir_empleado.css">
+	<title>Registro</title>
+	<link rel="stylesheet" href="css/registro.css">
 	<link rel="icon" href="imgs/ICONO.png">
 	
 </head>
@@ -11,7 +11,7 @@
 	<form action="" method="post" id="registro">
 		<fieldset>
 			<h1>REGISTRO</h1>
-			<a href="menu_logueo.php"><img src="imgs/cars.png" alt=""></a>
+			<a href="menu.html"><img src="imgs/cars.png" alt=""></a>
 			<div>
 				<input id="user" type="text" name="nombre" placeholder="Ingrese Nombre" data-validation="length" data-validation-length="min3">
 			</div>
@@ -30,19 +30,33 @@
 				<input id="user" type="number" name="documento" placeholder="Ingrese Documento" data-validation="length" data-validation-length="min9">
 			</div>
 			<div>
-				<input id="user" type="text" name="direccion" placeholder="Ingrese Direccion" data-validation="length" data-validation-length="min9">
-			</div>
-			<div>
-				<input id="user" type="number" name="telefono" placeholder="Ingrese Telefono" data-validation="length" data-validation-length="min5">
-			</div>
-			<div>
 				<input id="user" type="text" name="celular" placeholder="Ingrese Celular" data-validation="length" data-validation-length="min9">
 			</div>
 			<div>
-				<input id="user" type="email" name="correo" placeholder="Ingrese Email" data-validation="length" data-validation-length="min10">
+				<input id="user" type="text" name="direccion" placeholder="Ingrese Direccion" data-validation="length" data-validation-length="min10">
+			</div>
+			<div>
+				<input id="user" type="text" name="ciudad" placeholder="Ingrese Ciudad" data-validation="length" data-validation-length="min8">
+			</div>
+			<div>
+				<input id="user" type="email" name="email" placeholder="Ingrese Email" data-validation="length" data-validation-length="min10">
 			</div>
 			<div>
 				<input id="user" type="password" name="contrasena" placeholder="Ingrese Contraseña" data-validation="length" data-validation-length="min10">
+			</div>
+			<div>
+				<label>Tiene Licencia</label><br>
+				<select name="tipo_licencia">
+					<option>Seleccione Opcion</option>
+					<option>Si</option>
+					<option>No</option>
+				</select>
+			</div>
+			<div>
+				<input id="user" type="text" name="numero_licencia" placeholder="Ingrese Número Licencia" data-validation="length" data-validation-length="min9">
+			</div>
+			<div>
+				<input id="user" type="text" name="nit" placeholder="Ingrese NIT" data-validation="length" data-validation-length="min9">
 			</div>
 			<div class="btn">
 			<br>
@@ -70,25 +84,23 @@
 			$apellido = $_POST["apellido"];
 			$tipo_documento = $_POST["tipo_documento"];
 			$documento = $_POST["documento"];
-			$direccion = $_POST["direccion"];
-			$telefono = $_POST["telefono"];
 			$celular = $_POST["celular"];
-			$correo = $_POST["correo"];
+			$direccion = $_POST["direccion"];
+			$ciudad = $_POST["ciudad"];
+			$email = $_POST["email"];
 			$contrasena = $_POST["contrasena"];
-			if($nombre!="" && $apellido!="" && $tipo_documento!="" && $documento!="" && $direccion!="" && $telefono!="" && $celular!="" && $correo!="" && $contrasena!=""){
+			$tipo_licencia = $_POST["tipo_licencia"];
+			$numero_licencia = $_POST["numero_licencia"];
+			$nit = $_POST["nit"];
+			if($nombre!="" && $apellido!="" && $tipo_documento!="" && $documento!="" && $celular!="" && $direccion!="" && $ciudad!="" && $email!="" && $contrasena!="" && $tipo_licencia!="" && $numero_licencia!="" && $nit!=""){
 				$con = mysqli_connect('localhost','root','','proyecto_agil');
-				$sql = mysqli_query($con, "INSERT INTO anadir_empleado VALUES (DEFAULT,'', '$nombre','$apellido',
-					'$tipo_documento','$documento','$direccion','$telefono','$celular','$correo','$contrasena')");
+				$sql = mysqli_query($con, "INSERT INTO registro VALUES (DEFAULT, '$nombre','$apellido','$tipo_documento','$documento','$celular','$direccion','$ciudad','$email','$contrasena','$tipo_licencia','$numero_licencia','$nit')");
 				if($sql){
 					echo "<script>alert('Registrado Satisfactoriamente')</script>";
-				}else{
-					echo "estoy malo";
 				}
 			}else{
 				echo "<script>alert('No Se Pudo Registrar')</script>";
 			}
-			}else{
-				echo "no entre";
 			
 
 		}

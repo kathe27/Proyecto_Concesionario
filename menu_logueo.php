@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html>
 <title>newcars</title>
@@ -9,7 +10,6 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/menu.css">
 <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 <link rel="icon" href="imgs/ICONO.png">
@@ -22,23 +22,31 @@ $.src="https://v2.zopim.com/?4fOyoZZHu93TUjaDk2hNlj106bgj7p16";z.t=+new Date;$.
 type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 <!--End of Zendesk Chat Script--></script>
 </head>
-
+<?php 
+		$con = mysqli_connect('localhost','root','','proyecto_agil');
+ ?>
 <body>
 
 <h1 class="titulo">DPK NEW-CARS</h1>
 <img class="icono" src="imgs/ICONO.png" alt="">
-<a class="btn" href="loguin.php">Iniciar sesion</a>
 
 
 <ul id="menu">
 <li>
-	<a href="menu.html"><span class="glyphicon glyphicon-home"></span>Inicio</a>
+	<a href="menu.html"><span class="glyphicon glyphicon-home"></span><?php echo $_SESSION['nombre']; ?></a>
 </li>
 <li>
 	<li><a href="galeria.html"><span class="glyphicon glyphicon-search"></span>Quienes Somos</a></li>
 </li>
 <li>
-	<a href="maps.html"><span class="glyphicon glyphicon-map-marker"></span>Ubicacion</a>
+	<a href="#"><span class="glyphicon glyphicon-list-alt"></span>Catalogo</a>
+	<ul>
+		<li><a href="catalogo.html"><span class="glyphicon glyphicon-search"></span>Nuevos</a></li>
+		<li><a href="catalogov.html"><span class="glyphicon glyphicon-file"></span>Antiguos</a></li>
+	</ul>
+</li>
+<li>
+	<li><a href="maps.html"><span class="glyphicon glyphicon-map-marker"></span>Ubicacion</a></li>
 </li>
 </ul>
 

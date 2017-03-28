@@ -3,9 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Consultar</title>
-	<link rel="icon" href="imgs/ICONO.png">	
+	<link rel="icon" href="imgs/ICONO.png">
 	<link rel = "stylesheet" href = " https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/consultar_catalogo.css">
+	<link rel="stylesheet" href="css/consultar_cliente.css"> 
 	<style>
 		table {
 			border-collapse: collapse;
@@ -24,19 +24,19 @@
 			background-color: #6099AA;
 			color: #fff;
 		}
-	</style>
+	</style>	
 </head>
-<body>
-	<form action="" method="get" id="consultar_catalogo">
+<body>	
+	<form action="" method="get" id="consultar_cliente">
 		<fieldset>
 			<h1>CONSULTAR</h1>
 			<a href="menu_logueo.php"><img src="imgs/cars.png" alt=""></a>
 			<div>
-				<input type="text" id="marcas" name="marcas" placeholder="Digite Marca De Carro" data-validation="length" data-validation-length="min3">
-			</div>
+				<input type="number" id="documento" name="documento" placeholder="Digitar Documento De Identidad" data-validation="length" data-validation-length="min9">
+			</div>			
 			<div>
 			<br>
-				<input type="submit" value="Consultar" class="consultar">
+				<input type="submit" value="consultar" class="consultar">
 			</div>
 		</fieldset>
 	</form>
@@ -48,7 +48,7 @@
 	<script>
 		$(document).ready(function() {
 			$.validate({ 
-				form: '#consultar_catalogo', 
+				form: '#consultar_empleado', 
 				language: es 
 			});
 		});
@@ -56,39 +56,35 @@
 	<?php 
 		$con = mysqli_connect('localhost','root','','proyecto_agil');
 		if($_GET){
-			$marcas = $_GET["marcas"];
-			$sql = mysqli_query($con, "SELECT * FROM anadir_catalogo WHERE marcas= '$marcas'");
+			$documento = $_GET["documento"];
+			$sql = mysqli_query($con, "SELECT * FROM registro WHERE documento=$documento");
 			$row = mysqli_fetch_array($sql);
 		if($row){
 			echo "
 				<table border='1px'>
 					<tr>
-						<th>Foto</th>
-						<th>Marca</th>
-						<th>Modelo</th>
-						<th>Color</th>
-						<th>Precio</th>
+						<th>Nombre</th>
+						<th>Apellido</th>
 						<th>opciones</th>
 					</tr>
 					<tr>
-						<td>".$row['foto']."</td>
-						<td>".$row['marcas']."</td>
-						<td>".$row['modelo']."</td>
-						<td>".$row['color']."</td>
-						<td>".$row['precio']."</td>
+						<td>".$row['nombre']."</td>
+						<td>".$row['apellido']."</td>
 						<td>
-						<a href='modificar_catalogo.php?id=".$row['id']."'><button class='glyphicon glyphicon-pencil'></button></a>
-						<a href='eliminar_catalogo.php?id=".$row['id']."'><button class='glyphicon glyphicon-trash'></button></a>
+						<a href='modificar_cliente.php?id=".$row['id']."'><button class='glyphicon glyphicon-pencil'></button></a>
+						<a href='consultarc.php?id=".$row['id']."'><button class='glyphicon glyphicon-search'></button></a>
+						<a href='eliminar_cliente.php?id=".$row['id']."'><button class='glyphicon glyphicon-trash'></button></a>
 					</tr>
 					</tr>
 												
 				</table>
 				
 			";
-
 		}
 	}
 
 	?>
+
+
 </body>
 </html>
